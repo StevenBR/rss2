@@ -12,6 +12,10 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get("/", 'MainController@index');
+Route::get("/MainController/get_limit/{num}", 'MainController@get_limit');
+Route::get("/json", "MainController@json");
